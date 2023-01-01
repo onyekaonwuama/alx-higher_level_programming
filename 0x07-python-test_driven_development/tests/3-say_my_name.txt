@@ -1,0 +1,58 @@
+
+The ``say_my_name`` module
+===========================
+
+the module defines a function that prints first and last name
+
+Usage
+======
+
+``say_my_name(...)`` returns a string. 
+
+Import module
+
+>>> say_my_name = __import__("3-say_my_name").say_my_name
+
+
+Testing usual arguments
+
+>>> say_my_name("Jane", "Doe")
+My name is Jane Doe
+
+Testing for one argument
+>>> say_my_name("Jane")
+My name is Jane
+
+
+Testing for non strings
+
+>>> say_my_name("Jane", 2)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/alx-higher_level_programming/0x07-python-test_driven_development/3-say_my_name.py", line 18, in say_my_name
+    raise TypeError("last_name must be a string")
+TypeError: last_name must be a string
+
+
+>>> say_my_name(1, "Doe")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/alx-higher_level_programming/0x07-python-test_driven_development/3-say_my_name.py", line 16, in say_my_name
+    raise TypeError("first_name must be a string")
+TypeError: first_name must be a string
+
+
+Testing for empty and None arguments
+>>> say_my_name()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
+
+>>> say_my_name(None)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/alx-higher_level_programming/0x07-python-test_driven_development/3-say_my_name.py", line 16, in say_my_name
+    raise TypeError("first_name must be a string")
+TypeError: first_name must be a string
+
