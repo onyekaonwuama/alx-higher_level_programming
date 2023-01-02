@@ -1,0 +1,53 @@
+The ``text_indentation`` module
+===============================
+
+
+Usage
+=======
+
+new lines are printed after ., :, ? and \n
+
+Import module
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation  
+
+
+Testing with usual arguments               
+>>> text_indentation("Happy? New? Year:")                                                
+Happy?                                                                                   
+                                                                                         
+New?                                                                                     
+                                                                                         
+Year: 
+
+
+>>> text_indentation("what a\n new \n line")                                             
+what a                                                                                   
+new                                                                                      
+line>>>                                                                                  
+>>> text_indentation("it is \n \n\n ? : ? plenty?")                                      
+it is                                                                                    
+                                                                                         
+                                                                                         
+?                                                                                        
+                                                                                         
+:                                                                                        
+                                                                                         
+?                                                                                        
+                                                                                         
+plenty?                                                                                  
+                                                                                                
+Testing with integers                                                                                       
+>>> text_indentation(1233)                                                               
+Traceback (most recent call last):                                                       
+  File "<stdin>", line 1, in <module>                                                    
+  File "/alx-higher_level_programming/0x07-python-test_driven_development/5-text_indentat
+ion.py", line 14, in text_indentation                                                    
+    raise TypeError("text must be a string")                                             
+TypeError: text must be a string      
+
+Testing with no arguments                                                   
+>>> text_indentation()                                                                   
+Traceback (most recent call last):                                                       
+  File "<stdin>", line 1, in <module>                                                    
+TypeError: text_indentation() missing 1 required positional argument: 'text'         
