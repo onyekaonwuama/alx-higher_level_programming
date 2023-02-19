@@ -1,3 +1,3 @@
--- Write a script that creates the database hbtn_0c_0 in your MySQL server.
+-- Write a script that creates the database hbtn_0c_0 in your MySQL
 
-DROP Database IF EXISTS hbtn_0c_0;
+CREATE Database IF NOT EXISTS hbtn_0c_0;
